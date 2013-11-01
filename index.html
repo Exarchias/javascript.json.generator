@@ -9,6 +9,10 @@
 	var COLUMS = 5;
 	var JSONNAME = "TestSSONName";
 	var FormCounter = 0;
+	var counteraki = 0;
+	var counteraki2 = 0;
+	var CellContent = new Array();
+	var KeyCellContent = new Array();
 	
 	document.write("Welcome to the inline JSON generator</br>");
 	document.write("Please fill the text fields:</br></br>");
@@ -23,6 +27,32 @@
 		COLUMS =form.numberofkeys.value;
 		JSONNAME =form.nameofjson.value;
 		FormCounter = FormCounter + 1;
+		counteraki = 0;
+		counteraki2 = 0;
+		if (KeyCellContent.length == 0){
+			for (c=0; c<COLUMS; c++){
+					KeyCellContent[c]="Key" + c;
+				}
+			} 
+		
+		if (CellContent.length == 0){
+			for (co=0; co<ROWS; co++){
+				for (d=0; d<COLUMS; d++){
+					counteraki++;
+					CellContent[counteraki]="index" + counteraki;
+				}
+			}
+		} else {
+			for (co=0; co<ROWS; co++){
+				for (d=0; d<COLUMS; d++){
+					counteraki++;
+					//namer = "index" + counteraki;
+					//CellContent[counteraki]=document.getElementById('namer').value; // stuck here!!! Need to check this out after the break.
+					CellContent[counteraki]="kaka";
+					}
+				}
+			}
+			document.write(counteraki);
 			document.write("Welcome to the inline JSON generator</br>");
 			document.write("Please fill the text fields:</br></br>");
 			document.write("<form>Name of your JSON: <input type='text' name='nameofjson' value='" + JSONNAME +"'></br>");
@@ -32,12 +62,13 @@
 
 		document.write("</br>KEYS:</br></br>");
 		for (b=0; b<COLUMS; b++){
-				document.write("Key:" + eval(b+1) + " <input type='text' name='Key:" + eval(b+1) + "'>");
+				document.write("Key:" + eval(b+1) + " <input type='text' name='Key:" + eval(b+1) + "' value='" + KeyCellContent[b] + "'>");
 			}
 		document.write("</br></br>VALUES:</br></br>");
 		for (i=0; i<ROWS; i++){
 			for (a=0; a<COLUMS; a++){
-				document.write("R" + eval(i+1) + "C" + eval(a+1) +":<input type='text' name='r" + i + "c" + a +"'>");
+				counteraki2++;
+				document.write("R" + eval(i+1) + "C" + eval(a+1) +":<input type='text' name='index" + counteraki2 + "' value='" + CellContent[counteraki2] + "'>");
 			}
 			document.write("</br></br></form>");
 			
