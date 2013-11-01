@@ -9,6 +9,11 @@
 	var COLUMS = 5;
 
 //	function GenerateInput(){
+		document.write("</br>KEYS:</br></br>");
+		for (b=0; b<COLUMS; b++){
+				document.write("Key:" + eval(b+1) + " <input type='text' name='Key:" + eval(b+1) + "'>");
+			}
+		document.write("</br></br>VALUES:</br></br>");
 		for (i=0; i<ROWS; i++){
 			for (a=0; a<COLUMS; a++){
 				document.write("R" + eval(i+1) + "C" + eval(a+1) +":<input type='text' name='r" + i + "c" + a +"'>");
