@@ -28,7 +28,7 @@
 			document.write("<form>Name of your JSON: <input type='text' name='nameofjson' value='" + JSONNAME +"'></br>");
 			document.write("Number of Inputs(Rows): <input type='text' name='numberofrows' value='" + ROWS +"'></br>");
 			document.write("Number of Keys: <input type='text' name='numberofkeys' value='" + COLUMS +"'></br>");
-			document.write("</br><input onclick='GenerateCells(form)' type='button' value='Start generator!'></br></form>");
+			document.write("</br><input onclick='GenerateCells(form)' type='button' value='Start generator!'></br>");
 
 		document.write("</br>KEYS:</br></br>");
 		for (b=0; b<COLUMS; b++){
@@ -39,7 +39,7 @@
 			for (a=0; a<COLUMS; a++){
 				document.write("R" + eval(i+1) + "C" + eval(a+1) +":<input type='text' name='r" + i + "c" + a +"'>");
 			}
-			document.write("</br></br>");
+			document.write("</br></br></form>");
 			
 		}
 	};
