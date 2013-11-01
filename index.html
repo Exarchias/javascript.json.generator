@@ -11,9 +11,9 @@
 //	function GenerateInput(){
 		for (i=0; i<ROWS; i++){
 			for (a=0; a<COLUMS; a++){
-				document.write("Row" + eval(i+1) + ", Column" + eval(a+1) + "  ||  ");
+				document.write("R" + eval(i+1) + "C" + eval(a+1) +":<input type='text' name='r" + i + "c" + a +"'>");
 			}
-			document.write("</br>===============================================================</br>");
+			document.write("</br></br>");
 			
 		}
 //	};
