@@ -46,9 +46,9 @@
 			for (co=0; co<ROWS; co++){
 				for (d=0; d<COLUMS; d++){
 					counteraki++;
-					//namer = String("'index" + eval(counteraki + 1) + "'");
-					//CellContent[counteraki]= eval(document.getElementsByName(namer).value); // stuck here!!! Need to check this out after the break.
-					CellContent[counteraki]="kaka";
+					namer = String("'index" + eval(counteraki + 1) + "'");
+					CellContent[counteraki]= eval(document.getElementsByName(namer)[0].value); // <=== Still stuck here!!! Need to check this out after the break.
+					//CellContent[counteraki]="kaka"; //test //test
 					}
 				}
 			}
